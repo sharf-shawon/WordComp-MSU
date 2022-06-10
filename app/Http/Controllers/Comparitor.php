@@ -49,6 +49,7 @@ class Comparitor extends Controller
                     "staging" => $staging_location,
                     "live_url" => str_replace("live\\", "https://www.missouristate.edu/Policy/", $file),
                     "staging_url" => str_replace("staging\\", "https://ouwww.missouristate.edu/Policy/", $staging_location),
+                    "diff_url" => url("/diff/?file=".$file),
                     "live_count" => $live_count,
                     "staging_count" => $staging_count,
                     "diff" => $live_count - $staging_count
@@ -73,7 +74,7 @@ class Comparitor extends Controller
         // }
     }
 
-    function sanitizeData($raw){
+    static function sanitizeData($raw){
         return trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $raw)));
     }
 

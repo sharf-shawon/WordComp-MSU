@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Comparitor;
+use App\Http\Controllers\Differentor;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,8 @@ Route::get('/', function(){
 });
 Route::get('/view', [Comparitor::class, 'view']);
 Route::get('/json', [Comparitor::class, 'json']);
+Route::get('/diff', [Differentor::class, 'view']);
+Route::get('/findThis', [Differentor::class, 'findThis']);
 
 Auth::routes();
 

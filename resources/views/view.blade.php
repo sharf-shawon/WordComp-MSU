@@ -29,13 +29,13 @@
                                 {{$item['diff']}}
                             </td>
                             <td>
-                                <a href="{{$item['live_url']}}">{{$item['live_count']}}</a>
+                                <a target="_blank" href="{{$item['live_url']}}">{{$item['live_count']}}</a>
                             </td>
                             <td>
-                                <a href="{{$item['staging_url']}}">{{$item['staging_count']}}</a>
+                                <a target="_blank" href="{{$item['staging_url']}}">{{$item['staging_count']}}</a>
                             </td>
                             <td>
-                                {{$item['live']}}
+                                <a target="_blank" href="{{$item['diff_url']}}">{{$item['live']}}</a>
                             </td>
                             <td>
                                 {{$item['staging']}}
